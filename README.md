@@ -78,7 +78,7 @@ Things you may want to cover:
 | phone number  | integer    | null: false       |
 
 ### Association
-- belongs_to : address
+- belongs_to : buy
 
 
 ## buy table
