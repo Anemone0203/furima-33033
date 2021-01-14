@@ -1,0 +1,32 @@
+<mxfile host="65bd71144e" modified="2021-01-14T05:38:06.327Z" agent="5.0 (Macintosh; Intel Mac OS X 10_16_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="TpziObvPeOwd1kGwcAyo" version="13.10.0" type="embed">
+    <diagram id="GSyFYaAcnu0aSnQgMb0z" name="ページ1">
+        <mxGraphModel dx="1016" dy="859" grid="1" gridSize="16" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="464" y="144" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;br&gt;user&lt;br&gt;&lt;br&gt;・ニックネーム&lt;br&gt;・address&lt;br&gt;・パスワード&lt;br&gt;・氏名&lt;br&gt;・氏名 カナ&lt;br&gt;・生年月日&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="61" y="22" width="243" height="244" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;font style=&quot;font-size: 21px&quot;&gt;items&lt;br&gt;&lt;br&gt;・商品名&lt;br&gt;・説明&lt;br&gt;・カテゴリー&lt;br&gt;・状態&lt;br&gt;・配送料の負担&lt;br&gt;・地域&lt;br&gt;・配送日数&lt;br&gt;・金額&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="481" y="16" width="271" height="256" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="448" y="456" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="&lt;span style=&quot;font-size: 20px&quot;&gt;購入&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="46" y="368" width="242" height="176" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;font style=&quot;font-size: 20px&quot;&gt;配送先&lt;br&gt;・住所&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="465" y="368" width="240" height="176" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
