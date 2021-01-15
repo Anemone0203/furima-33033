@@ -39,7 +39,7 @@ Things you may want to cover:
 | first-name kana    | string              | null: false             |
 | last-name kana     | string              | null: false             |
 | date               | integer             | null:false              |
-| encrypted_password | integer             | null:false              |
+| encrypted_password | string              | null:false              |
 
 ### Association
 
