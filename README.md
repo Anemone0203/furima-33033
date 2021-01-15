@@ -27,25 +27,39 @@ Things you may want to cover:
 
 # DB 設計
 
+
 ## users table
 
 | Column             | Type                | Options                 |
 |--------------------|---------------------|-------------------------|
-| nickname           |                     |                         |
-| e-mail             | string              | unique: true            |
+| nickname           | string              | null: false             |
+| e-mail             | string              | null: false             |
 | first-name         | string              | null: false             |
 | last-name          | string              | null: false             |
 | first-name kana    | string              | null: false             |
 | last-name kana     | string              | null: false             |
-| year of birth_id   | integer             | null:false              |
-| month of birth_id  | integer             | null:false              |
-| date of birth_id   | integer             | null:false              |
+| date               | integer             | null:false              |
 | encrypted_password | integer             | null:false              |
 
 ### Association
 
 * has_many :item
+* has_one :buy
 
+
+
+## buy table
+
+|Column         | Type       | Options             |
+|---------------|------------|---------------------|
+| user          | references | foreign_key: true   |
+| item          | references | foreign_key: true   |
+| address       | references | foreign_key: true   |
+
+### Association
+
+* has_one : address
+* belongs_to :user
 
 
 ## items table
@@ -64,6 +78,8 @@ Things you may want to cover:
 ### Association
 
 * belongs_to :user
+* has_one :buy
+
 
 
 ## address table
@@ -78,20 +94,10 @@ Things you may want to cover:
 | phone number  | integer    | null: false       |
 
 ### Association
-- belongs_to : address
+- belongs_to : buy
 
 
-## buy table
 
-|Column         | Type       | Options             |
-|---------------|------------|---------------------|
-| user          | references | foreign_key: true   |
-| item          | references | foreign_key: true   |
-| address       | references | foreign_key: true   |
-
-### Association
-
-- has_one : address
 
 
 
