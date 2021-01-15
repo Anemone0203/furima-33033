@@ -6,16 +6,16 @@
 
 ## users table
 
-| Column             | Type                | Options                 |
-|--------------------|---------------------|-------------------------|
-| nickname           | string              | null: false, unique: true             |
-| e-mail             | integer             | unique: true            |
-| first-name         | string              | null: false             |
-| last-name          | string              | null: false             |
-| first-name kana    | string              | null: false             |
-| last-name kana     | string              | null: false             |
-| birth              | date                | null:false              |
-| encrypted_password | string              | null:false              |
+| Column             | Type                | Options                   |
+|--------------------|---------------------|---------------------------|
+| nickname           | string              | null: false, unique: true |
+| e-mail             | integer             | unique: true              |
+| first-name         | string              | null: false               |
+| last-name          | string              | null: false               |
+| first-name kana    | string              | null: false               |
+| last-name kana     | string              | null: false               |
+| birth              | date                | null:false                |
+| encrypted_password | string              | null:false                |
 
 ### Association
 
