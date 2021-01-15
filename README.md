@@ -9,11 +9,11 @@
 | Column             | Type                | Options                   |
 |--------------------|---------------------|---------------------------|
 | nickname           | string              | null: false, unique: true |
-| email              | integer             | null: false, unique: true |
-| first-name         | string              | null: false               |
-| last-name          | string              | null: false               |
-| first-name kana    | string              | null: false               |
-| last-name kana     | string              | null: false               |
+| email              | string              | null: false, unique: true |
+| first_name         | string              | null: false               |
+| last_name          | string              | null: false               |
+| first_name kana    | string              | null: false               |
+| last_name kana     | string              | null: false               |
 | birth              | date                | null: false               |
 | encrypted_password | string              | null: false               |
 
@@ -30,6 +30,7 @@
 |---------------|------------|---------------------|
 | user          | references | foreign_key: true   |
 | item          | references | foreign_key: true   |
+| address       | references | foreign_key: true   |
 
 ### Association
 
@@ -50,6 +51,7 @@
 | area_id                             | integer    | null: false       |
 | date_id                             | integer    | null: false       |
 | price                               | integer    | null: false       |
+| users                               | references | foreign_key: true |
 
 ### Association
 
@@ -65,9 +67,10 @@
 | postal code   | string     | null: false       |
 | prefecture_id | integer    | null: false       |
 | city          | string     | null: false       |
-| address line1 | string     | null: false       |
-| address line2 | string     |                   |
-| phone number  | string     | null: false       |
+| address_line1 | string     | null: false       |
+| address_line2 | string     |                   |
+| phone_number  | string     | null: false       |
+| buy           | references | foreign_key :true |
 
 ### Association
 - belongs_to : buy
