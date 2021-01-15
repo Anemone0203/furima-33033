@@ -9,13 +9,13 @@
 | Column             | Type                | Options                   |
 |--------------------|---------------------|---------------------------|
 | nickname           | string              | null: false, unique: true |
-| e-mail             | integer             | unique: true              |
+| email              | integer             | null: false, unique: true |
 | first-name         | string              | null: false               |
 | last-name          | string              | null: false               |
 | first-name kana    | string              | null: false               |
 | last-name kana     | string              | null: false               |
-| birth              | date                | null:false                |
-| encrypted_password | string              | null:false                |
+| birth              | date                | null: false               |
+| encrypted_password | string              | null: false               |
 
 ### Association
 
@@ -43,7 +43,7 @@
 | Column                              | Type       | Options           |
 |-------------------------------------|------------|-------------------|
 | title                               | string     | null: false       |
-| text                                | string     | null: false       |
+| text                                | text       | null: false       |
 | category_id                         | integer    | null: false       |
 | condition_id                        | integer    | null: false       |
 | delivery_id                         | integer    | null: false       |
