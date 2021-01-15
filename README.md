@@ -8,19 +8,19 @@
 
 | Column             | Type                | Options                 |
 |--------------------|---------------------|-------------------------|
-| nickname           | string              | null: false             |
-| e-mail             | string              | unique: true            |
+| nickname           | string              | null: false, unique: true             |
+| e-mail             | integer             | unique: true            |
 | first-name         | string              | null: false             |
 | last-name          | string              | null: false             |
 | first-name kana    | string              | null: false             |
 | last-name kana     | string              | null: false             |
-| date               | integer             | null:false              |
+| birth              | date                | null:false              |
 | encrypted_password | string              | null:false              |
 
 ### Association
 
-* has_many :item
-* has_many :buy
+* has_many :items
+* has_many :buys
 
 
 
@@ -28,8 +28,8 @@
 
 |Column         | Type       | Options             |
 |---------------|------------|---------------------|
-| user_id       | references | foreign_key: true   |
-| item_id       | references | foreign_key: true   |
+| user          | references | foreign_key: true   |
+| item          | references | foreign_key: true   |
 
 ### Association
 
@@ -62,11 +62,11 @@
 
 | Column        | Type       | Options           |
 |---------------|------------|-------------------|
-| postal code   | integer    | null: false       |
+| postal code   | string     | null: false       |
 | prefecture_id | integer    | null: false       |
 | city          | string     | null: false       |
 | address line1 | string     | null: false       |
-| address line2 | string     | null: false       |
+| address line2 | string     |                   |
 | phone number  | string     | null: false       |
 
 ### Association
