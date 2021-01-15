@@ -33,7 +33,7 @@ Things you may want to cover:
 | Column             | Type                | Options                 |
 |--------------------|---------------------|-------------------------|
 | nickname           | string              | null: false             |
-| e-mail             | string              | null: false             |
+| e-mail             | string              | unique: true            |
 | first-name         | string              | null: false             |
 | last-name          | string              | null: false             |
 | first-name kana    | string              | null: false             |
@@ -44,7 +44,7 @@ Things you may want to cover:
 ### Association
 
 * has_many :item
-* has_one :buy
+* has_many :buy
 
 
 
@@ -52,14 +52,14 @@ Things you may want to cover:
 
 |Column         | Type       | Options             |
 |---------------|------------|---------------------|
-| user          | references | foreign_key: true   |
-| item          | references | foreign_key: true   |
-| address       | references | foreign_key: true   |
+| user_id       | references | foreign_key: true   |
+| item_id       | references | foreign_key: true   |
 
 ### Association
 
 * has_one : address
 * belongs_to :user
+* belongs_to :item
 
 
 ## items table
@@ -88,10 +88,10 @@ Things you may want to cover:
 |---------------|------------|-------------------|
 | postal code   | integer    | null: false       |
 | prefecture_id | integer    | null: false       |
-| city          | integer    | null: false       |
-| address line1 | integer    | null: false       |
-| address line2 | integer    | null: false       |
-| phone number  | integer    | null: false       |
+| city          | string     | null: false       |
+| address line1 | string     | null: false       |
+| address line2 | string     | null: false       |
+| phone number  | string     | null: false       |
 
 ### Association
 - belongs_to : buy
