@@ -30,7 +30,6 @@
 |---------------|------------|---------------------|
 | user          | references | foreign_key: true   |
 | item          | references | foreign_key: true   |
-| address       | references | foreign_key: true   |
 
 ### Association
 
