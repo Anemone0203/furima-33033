@@ -2,9 +2,19 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   before do
     @user = FactoryBot.build(:user)
+    # binding.pry
+    # sleep 1
   end
-
+  
   describe "ユーザー新規登録" do
+    context '内容に問題ない場合' do
+      it "nicknameとemail、passwordが半角英数字混合6文字以上、last＿nameが全角、first_nameが全角、last_name_kanaが全角、first_name_kanaが全角であれば登録できる" do
+        # binding.pry
+      expect(@user).to be_valid
+      end
+    end
+
+    context '内容に問題がある場合'
     it "nicknameが空だと登録できない"do
      @user.nickname = ""
     @user.valid?

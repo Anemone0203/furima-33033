@@ -5,8 +5,8 @@ FactoryBot.define do
     password                {"a00000"}
     last_name               {"田中"}
     first_name              {"田中"}
-    last_name_kana          {"タナカ"}
     first_name_kana         {"タナカ"}
+    last_name_kana          {"マエダ"}
     birth                   {"2011-11-11"}
   end
 end
