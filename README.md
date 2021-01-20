@@ -48,9 +48,9 @@
 | condition_id                        | integer    | null: false       |
 | delivery_id                         | integer    | null: false       |
 | prefecture_id                       | integer    | null: false       |
-| date_id                             | integer    | null: false       |
+| arrival_id                             | integer    | null: false       |
 | price                               | integer    | null: false       |
-| users                               | references | foreign_key: true |
+| user                                | references | foreign_key: true |
 
 ### Association
 
