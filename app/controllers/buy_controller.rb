@@ -1,2 +1,0 @@
-class BuyController < ApplicationController
-end
