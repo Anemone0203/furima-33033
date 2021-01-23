@@ -20,7 +20,6 @@
         <%= @item.delivery.name %>
       </span>
     </div>
-   <% if user_signed_in?  %>
      <% if user_signed_in? && current_user.id == @item.user_id %>
       <%= link_to '商品の編集', edit_item_path, method: :get, class: "item-red-btn" %>
       <p class='or-text'>or</p>
