@@ -13,7 +13,7 @@ class Item < ApplicationRecord
     end
     validates :image
     validates_inclusion_of :price, in: 300..9_999_999
-    validates :price /\A[0-9]+\z/
+    # validates :price /\A[0-9]+\z/
   end
   belongs_to :category
   belongs_to :condition
