@@ -8,8 +8,7 @@ app/assets/stylesheets/items/new.css %>
   <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を入力</h2>
     <%= form_with model: @item, local: true do |f| %>
-
-    <% render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_messages', model: f.object %>
 
     <div class="img-upload">
       <div class="weight-bold-text">
@@ -87,7 +86,7 @@ app/assets/stylesheets/items/new.css %>
             <span class="indispensable">必須</span>
           </div>
           <span class="sell-yen">¥</span>
-          <%= f.text_field :hoge, class:"price-input", id:"item-price", placeholder:"例）300" %>
+          <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
         </div>
         <div class="price-content">
           <span>販売手数料 (10%)</span>
@@ -123,7 +122,7 @@ app/assets/stylesheets/items/new.css %>
 
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
-      <%# <%= f.submit "変更する" item_path, method: :patch, class:"sell-btn" %> %>
+      <%= f.submit "変更する", class:"sell-btn" %>
       <%=link_to 'もどる', items_path, class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
