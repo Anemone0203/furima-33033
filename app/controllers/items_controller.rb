@@ -39,6 +39,9 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    @item.destroy
+    if current_user == @item.user
+    end
   end
 
   def set_tweet
