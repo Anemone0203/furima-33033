@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
+  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+
+
   def index
     @items = Item.all.order(created_at: :desc)
   end 
@@ -18,8 +21,31 @@ class ItemsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+    if current_user == @item.user
+    else
+      redirect_to root_path
+    end
+  end
+
+  def update
+     if @item.update(item_params)
+      redirect_to item_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    item.destroy
+  end
+
+  def set_tweet
     @item = Item.find(params[:id])
   end
+
 
   private
 
