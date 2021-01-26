@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
-  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  # before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
 
   def index
@@ -38,9 +38,9 @@ class ItemsController < ApplicationController
     end
   end
 
-  def destroy
-    item.destroy
-  end
+  # def destroy
+  #   item.destroy
+  # end
 
   def set_tweet
     @item = Item.find(params[:id])
