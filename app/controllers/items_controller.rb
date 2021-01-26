@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, except: [:new, :create]
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
 
@@ -39,8 +39,9 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item.destroy
     if current_user == @item.user
+    @item.destroy
+    redirect_to root_path
     end
   end
 
